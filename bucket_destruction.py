@@ -2,9 +2,9 @@
 #!/usr/bin/python3.4
 #
 # WARNING: This utility is for deleting stuff. Don't use it if you're not
-#          ready for the consiquences.
+#          ready for the consequences.
 #
-# Utility for cleaning or lifecycling buckets.
+# Utility for cleaning or lifecycle of buckets.
 # - Delete non-current objects in situations where CRR is required on source
 #   buckets.
 # - Expire objects based on date or age.
@@ -282,7 +282,7 @@ def zap_objects(args):
         for ovs in page_iterator:
             
             # Keep the process pool full. Since we're processing as we're
-            # listing there's assymetry in the start times so there's a
+            # listing there's asymmetry in the start times so there's a
             # little extra work to keep the pool full.
             while True:
 
@@ -397,9 +397,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="WARNING: this utility is for deleting data. Do not use unless you've tested "
-        + "for your use case in a lab enviornment. The author(s) are not responsibe for whatever "
-        + "happens when you use this utility.\n\nThis is a bucket object delete and primitivie lifcycling "
-        + "utility. Delete non-currnet objects (CRR cleanup), markers (undelete), object versions; "
+        + "for your use case in a lab environment. The author(s) are not responsible for whatever "
+        + "happens when you use this utility.\n\nThis is a bucket object delete and primitive lifcycling "
+        + "utility. Delete non-current objects (CRR cleanup), markers (undelete), object versions; "
         + "delete based on object last-modified date; delete all objects and pending transactions "
         + "for bucket removal."
     )
